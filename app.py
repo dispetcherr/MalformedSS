@@ -1,4 +1,4 @@
-from flask import Flask, request
+хfrom flask import Flask, request
 import requests
 
 app = Flask(__name__)
@@ -8,7 +8,7 @@ WEBHOOK_BIG   = "https://discord.com/api/webhooks/1475041311273910463/FIDxmKbEJ8
 
 THRESHOLD = 20
 
-@app.route("/log", methods=["POST"])
+@app.route("/api/log", methods=["POST"])
 def log_game():
     data = request.json or {}
     players = int(data.get("players", 0))
